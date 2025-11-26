@@ -56,7 +56,7 @@ function Home() {
           <div className="contact-info">
             <div className="contact-method">
               <h3>Email</h3>
-              <a href="mailto:bookings@riptiderentals.com">bookings@riptiderentals.com</a>
+              <a href="mailto:bookings@ripcurlrentals.com">bookings@ripcurlrentals.com</a>
             </div>
             <div className="contact-method">
               <h3>Phone</h3>

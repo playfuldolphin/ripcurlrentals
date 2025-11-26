@@ -8,12 +8,12 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Riptide Rentals</h3>
+            <h3>Ripcurl Rentals</h3>
             <p>Private vacation rentals in Jacksonville Beach and St. Augustine</p>
           </div>
           <div className="footer-section">
             <h4>Contact Us</h4>
-            <p>Email: bookings@riptiderentals.com</p>
+            <p>Email: bookings@ripcurlrentals.com</p>
             <p>Phone: (904) 555-0123</p>
           </div>
           <div className="footer-section">
@@ -23,7 +23,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Riptide Rentals. All rights reserved.</p>
+          <p>&copy; {currentYear} Ripcurl Rentals. All rights reserved.</p>
         </div>
       </div>
     </footer>

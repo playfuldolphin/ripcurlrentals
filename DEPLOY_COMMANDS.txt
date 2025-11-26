@@ -1,0 +1,129 @@
+================================================================================
+DEPLOYMENT COMMANDS FOR RIPTIDE RENTALS
+================================================================================
+
+STEP 1: Push to GitHub
+========================
+
+After creating the repository on GitHub, run these commands:
+
+cd /Users/noahwilson/nefl-rentals
+
+git remote add origin https://github.com/playfuldolphin/riptide-rentals.git
+
+git branch -M main
+
+git push -u origin main
+
+(You may be asked to authenticate - follow GitHub's prompts)
+
+================================================================================
+
+STEP 2: Deploy to Netlify
+========================
+
+1. Go to: https://netlify.com
+
+2. Click "Sign up" (sign up with GitHub - easiest!)
+
+3. After signing in, click "Add new site"
+
+4. Click "Import an existing project"
+
+5. Click "Deploy with GitHub"
+
+6. Authorize Netlify to access your GitHub
+
+7. Select "playfuldolphin/riptide-rentals" repository
+
+8. Configure build settings:
+   - Build command: npm run build
+   - Publish directory: dist
+   - Click "Deploy site"
+
+9. Wait 2-3 minutes for deployment
+
+10. You'll get a URL like: https://wonderful-name-123456.netlify.app
+
+11. TEST YOUR SITE - click the URL and make sure it works!
+
+================================================================================
+
+STEP 3: Connect GoDaddy Domain
+========================
+
+A. IN NETLIFY:
+
+1. Click on your site in Netlify dashboard
+
+2. Go to "Domain settings"
+
+3. Click "Add custom domain"
+
+4. Enter: riptiderentals.com
+
+5. Click "Verify" then "Add domain"
+
+6. Netlify will show DNS instructions - KEEP THIS PAGE OPEN
+
+B. IN GODADDY:
+
+1. Go to: https://godaddy.com/account
+
+2. Sign in
+
+3. Click "My Products"
+
+4. Find "riptiderentals.com" 
+
+5. Click "DNS" button
+
+6. You'll see DNS records
+
+EASIEST METHOD - Use Netlify DNS:
+
+Back in Netlify:
+1. Click "Set up Netlify DNS" (recommended)
+2. Netlify gives you 4 nameservers like:
+   - dns1.p01.nsone.net
+   - dns2.p01.nsone.net
+   - dns3.p01.nsone.net
+   - dns4.p01.nsone.net
+
+In GoDaddy:
+1. On the riptiderentals.com page
+2. Scroll to "Nameservers" section
+3. Click "Change"
+4. Select "Enter my own nameservers (advanced)"
+5. Enter the 4 Netlify nameservers
+6. Click "Save"
+
+Wait 24-48 hours for DNS to propagate (usually works in 1-4 hours)
+
+================================================================================
+
+STEP 4: Set Up Email Forwarding
+========================
+
+In GoDaddy:
+1. My Products → riptiderentals.com
+2. Look for "Email" or "Email Forwarding"
+3. Click "Manage"
+4. Add forwarding rule:
+   - From: bookings@riptiderentals.com
+   - To: YOUR_PERSONAL_EMAIL@gmail.com
+5. Save
+
+Now booking inquiries will come to your email!
+
+================================================================================
+
+TIMELINE:
+- Push to GitHub: 1 minute
+- Deploy to Netlify: 5 minutes
+- Connect domain: 10 minutes
+- DNS propagation: 1-48 hours (usually 2-4 hours)
+
+Your site will be live at riptiderentals.com soon! 🚀
+
+================================================================================

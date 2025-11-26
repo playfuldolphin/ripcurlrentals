@@ -36,7 +36,7 @@ function Property() {
   const handleSubmit = (e) => {
     e.preventDefault()
     // In a real application, this would send to a backend
-    const mailtoLink = `mailto:bookings@riptiderentals.com?subject=Booking Inquiry - ${property.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACheck-in: ${formData.checkIn}%0D%0ACheck-out: ${formData.checkOut}%0D%0AGuests: ${formData.guests}%0D%0AMessage: ${formData.message}`
+    const mailtoLink = `mailto:bookings@ripcurlrentals.com?subject=Booking Inquiry - ${property.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACheck-in: ${formData.checkIn}%0D%0ACheck-out: ${formData.checkOut}%0D%0AGuests: ${formData.guests}%0D%0AMessage: ${formData.message}`
     window.location.href = mailtoLink
   }
 

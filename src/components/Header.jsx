@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <div className="container">
         <Link to="/" className="logo">
-          <h1>Riptide Rentals</h1>
+          <h1>Ripcurl Rentals</h1>
         </Link>
         <nav>
           <Link to="/">Properties</Link>
