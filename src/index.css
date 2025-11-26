@@ -69,6 +69,7 @@ a:hover {
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for sticky header */
 }
 
 /* Focus Styles for Accessibility */
