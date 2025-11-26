@@ -17,7 +17,8 @@ function Home() {
       {/* Properties Section */}
       <section id="properties" className="properties-section">
         <div className="container">
-          <h2>Our Properties</h2>
+          <h2>Choose Your Perfect Escape</h2>
+          <p>Three stunning properties across Jacksonville Beach and St. Augustine</p>
           <div className="properties-grid">
             {properties.map(property => (
               <div key={property.id} className="property-card">
@@ -51,7 +52,8 @@ function Home() {
       {/* Why Book Direct Section */}
       <section className="book-direct-section">
         <div className="container">
-          <h2>Why Book Direct With Us?</h2>
+          <h2>Why Book Direct?</h2>
+          <p>Save money, get personal service, and enjoy a seamless booking experience</p>
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-icon">💰</div>

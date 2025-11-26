@@ -1,126 +1,179 @@
+/* Clean Modern Homepage Design */
+
 .home {
   width: 100%;
 }
 
-/* Hero Section */
+/* Hero Section - Clean & Impactful */
 .hero {
-  height: 500px;
-  background: linear-gradient(rgba(0, 102, 204, 0.5), rgba(0, 102, 204, 0.5)),
-    url('/images/area/jaxbeach.jpeg') center/cover;
+  height: 75vh;
+  min-height: 500px;
+  max-height: 800px;
+  background: linear-gradient(rgba(0, 168, 150, 0.15), rgba(0, 168, 150, 0.35)),
+    url('/images/area/jaxbeach.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  position: relative;
+}
+
+.hero-content {
   text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeInUp 0.8s ease;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin-bottom: 2.5rem;
+  color: white;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
-  background: white;
-  color: #0066cc;
+  padding: 1.25rem 3rem;
+  background: var(--white);
+  color: var(--primary);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  background: var(--primary);
+  color: var(--white);
 }
 
-/* Properties Section */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Properties Section - Clean Cards */
 .properties-section {
-  padding: 4rem 0;
-  background: #f9f9f9;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  padding: 6rem 0;
+  background: var(--bg-light);
 }
 
 .properties-section h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #1a1a1a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.properties-section > .container > p {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .properties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .property-card {
-  background: white;
-  border-radius: 10px;
+  background: var(--white);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .property-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px var(--shadow-hover);
 }
 
 .property-image {
   width: 100%;
-  height: 250px;
+  height: 280px;
   overflow: hidden;
+  position: relative;
 }
 
 .property-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.property-card:hover .property-image img {
+  transform: scale(1.05);
 }
 
 .property-info {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .property-info h3 {
-  margin: 0 0 0.5rem 0;
-  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
   font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .property-info .location {
-  color: #666;
+  color: var(--text-light);
+  font-size: 0.95rem;
   margin: 0 0 1rem 0;
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.property-info .location::before {
+  content: '📍';
 }
 
 .property-info .description {
-  color: #333;
-  margin-bottom: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .property-details {
   display: flex;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-dark);
+  font-weight: 500;
 }
 
 .property-footer {
@@ -130,50 +183,162 @@
 }
 
 .price {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.1rem;
+  color: var(--text-light);
 }
 
 .price strong {
-  color: #0066cc;
-  font-size: 1.5rem;
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .view-button {
-  padding: 1rem 2rem;
-  background: #ff6b35;
-  color: white;
+  padding: 0.875rem 2rem;
+  background: var(--primary);
+  color: var(--white);
   text-decoration: none;
   border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: all 0.3s;
-  box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .view-button:hover {
-  background: #ff5722;
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
 }
 
-/* Contact Section */
+/* Why Book Direct - Simplified */
+.book-direct-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.book-direct-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.book-direct-section > .container > p {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--bg-light);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--shadow);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.benefit-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Testimonials - Clean Design */
+.testimonials-section {
+  padding: 6rem 0;
+  background: var(--bg-light);
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--shadow-hover);
+}
+
+.stars {
+  color: #FFB900;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.testimonial-author {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Contact Section - Minimal */
 .contact-section {
-  padding: 4rem 0;
-  background: white;
+  padding: 6rem 0;
+  background: var(--white);
   text-align: center;
 }
 
 .contact-section h2 {
-  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #1a1a1a;
 }
 
 .contact-section > .container > p {
   font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 2rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
 }
 
 .contact-info {
@@ -184,230 +349,65 @@
 }
 
 .contact-method h3 {
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+  font-size: 1.1rem;
 }
 
 .contact-method a {
-  color: #0066cc;
+  color: var(--primary);
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .contact-method a:hover {
-  text-decoration: underline;
+  color: var(--primary-dark);
+  transform: translateY(-1px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    height: 400px;
+    height: 60vh;
   }
   
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
+  .properties-section,
+  .book-direct-section,
+  .testimonials-section,
+  .contact-section {
+    padding: 4rem 0;
   }
   
   .properties-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .benefits-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .property-details {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
+  }
+  
+  .property-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .view-button {
+    width: 100%;
+    text-align: center;
   }
   
   .contact-info {
     gap: 2rem;
-  }
-}
-
-/* About the Area Section */
-.area-section {
-  padding: 4rem 0;
-  background: white;
-}
-
-.area-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-}
-
-.area-intro {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
-
-.area-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.area-image-card {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.area-image-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.area-image-card img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-}
-
-.area-image-caption {
-  padding: 1.5rem;
-  background: white;
-}
-
-.area-image-caption h3 {
-  margin: 0 0 0.5rem 0;
-  color: #0066cc;
-  font-size: 1.5rem;
-}
-
-.area-image-caption p {
-  margin: 0;
-  color: #666;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .area-images {
-    grid-template-columns: 1fr;
-  }
-  
-  .area-image-card img {
-    height: 300px;
-  }
-}
-
-/* Why Book Direct Section */
-.book-direct-section {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-}
-
-.book-direct-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: white;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.benefit-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.benefit-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.benefit-card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.benefit-card p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-}
-
-/* Testimonials Section */
-.testimonials-section {
-  padding: 4rem 0;
-  background: #f9f9f9;
-}
-
-.testimonials-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #1a1a1a;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.stars {
-  color: #ffc107;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.testimonial-text {
-  color: #333;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
-.testimonial-author {
-  color: #666;
-  font-weight: 600;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .benefits-grid,
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }

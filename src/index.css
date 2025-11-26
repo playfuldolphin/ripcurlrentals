@@ -1,3 +1,5 @@
+/* Clean Modern Design - Ripcurl Rentals */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,33 +7,85 @@
 }
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* Modern Color Palette */
+  --primary: #00A896;
+  --primary-dark: #028174;
+  --accent: #FF6B6B;
+  --text-dark: #2C3E50;
+  --text-light: #5D6D7E;
+  --bg-light: #F8F9FA;
+  --white: #FFFFFF;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+  
+  /* Typography */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.6;
   font-weight: 400;
   
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* Smooth Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: var(--text-dark);
+  background-color: var(--white);
+  font-size: 16px;
 }
 
 #root {
   min-height: 100vh;
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
 a {
-  color: #0066cc;
+  color: var(--primary);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #0052a3;
+  color: var(--primary-dark);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
