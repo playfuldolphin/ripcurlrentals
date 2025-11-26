@@ -104,6 +104,22 @@ function Property() {
                 ))}
               </ul>
             </div>
+
+            <div className="availability-section">
+              <h2>Check Availability</h2>
+              <p className="availability-note">
+                To check availability for your dates, please submit a booking inquiry below or contact us directly.
+                We'll respond within 2 hours with availability confirmation and pricing.
+              </p>
+              <div className="availability-cta">
+                <a href="#booking-form" className="check-availability-btn">
+                  Check Your Dates
+                </a>
+                <a href="mailto:bookings@ripcurlrentals.com" className="email-direct-btn">
+                  Email Directly
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Booking Form */}
@@ -114,8 +130,9 @@ function Property() {
                 <span className="period">/night</span>
               </div>
               
-              <form onSubmit={handleSubmit} className="booking-form">
+              <form onSubmit={handleSubmit} className="booking-form" id="booking-form">
                 <h3>Request to Book</h3>
+                <p className="form-subtitle">We typically respond within 2 hours</p>
                 
                 <div className="form-group">
                   <label>Name *</label>

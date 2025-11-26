@@ -279,3 +279,77 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Availability Section */
+.availability-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f0f8ff;
+  border-radius: 10px;
+  border: 2px solid #0066cc;
+}
+
+.availability-section h2 {
+  margin-bottom: 1rem;
+  color: #0066cc;
+}
+
+.availability-note {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.availability-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.check-availability-btn,
+.email-direct-btn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.check-availability-btn {
+  background: #ff6b35;
+  color: white;
+}
+
+.check-availability-btn:hover {
+  background: #ff5722;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.email-direct-btn {
+  background: white;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+}
+
+.email-direct-btn:hover {
+  background: #0066cc;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.form-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin: -0.5rem 0 1rem 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .availability-cta {
+    flex-direction: column;
+  }
+}
