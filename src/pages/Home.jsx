@@ -52,28 +52,98 @@ function Home() {
       {/* Why Book Direct Section */}
       <section className="book-direct-section">
         <div className="container">
-          <h2>Why Book Direct?</h2>
-          <p>Save money, get personal service, and enjoy a seamless booking experience</p>
+          <div className="book-direct-header">
+            <h2>Book Direct & Save</h2>
+            <p className="subtitle">Skip the fees, get better rates, and enjoy personal service</p>
+          </div>
+
+          {/* Comparison Box */}
+          <div className="comparison-box">
+            <div className="comparison-side other-platforms">
+              <div className="comparison-label">Other Booking Sites</div>
+              <div className="comparison-price">
+                <span className="price-amount">$300</span>
+                <span className="price-label">per night</span>
+              </div>
+              <ul className="comparison-features">
+                <li className="negative">+ 15-20% service fees</li>
+                <li className="negative">+ Platform charges</li>
+                <li className="negative">Slow response times</li>
+                <li className="negative">Generic support</li>
+              </ul>
+            </div>
+
+            <div className="comparison-divider">
+              <span>VS</span>
+            </div>
+
+            <div className="comparison-side direct-booking highlight">
+              <div className="comparison-label best-value">Best Value ⭐</div>
+              <div className="comparison-price">
+                <span className="price-amount">$250</span>
+                <span className="price-label">per night</span>
+              </div>
+              <ul className="comparison-features">
+                <li className="positive">✓ No booking fees</li>
+                <li className="positive">✓ No service charges</li>
+                <li className="positive">✓ 2-hour response time</li>
+                <li className="positive">✓ Personal owner service</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Benefits Grid */}
           <div className="benefits-grid">
             <div className="benefit-card">
-              <div className="benefit-icon">💰</div>
-              <h3>Save 17-23%</h3>
-              <p>No Airbnb or VRBO fees. You pay exactly what you see - no hidden charges.</p>
+              <svg className="benefit-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3>Save $500+ Per Week</h3>
+              <p>No platform fees mean more money for beach activities and dining</p>
             </div>
+
             <div className="benefit-card">
-              <div className="benefit-icon">⚡</div>
-              <h3>Fast Response</h3>
-              <p>Direct communication with owners. We typically respond within 2 hours.</p>
+              <svg className="benefit-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h3>Lightning Fast Replies</h3>
+              <p>Text or email the owners directly - average 2 hour response time</p>
             </div>
+
             <div className="benefit-card">
-              <div className="benefit-icon">🤝</div>
-              <h3>Personal Service</h3>
-              <p>Family-owned and operated. We care about making your stay perfect.</p>
+              <svg className="benefit-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h3>Family-Owned Service</h3>
+              <p>We personally manage our properties and care about your experience</p>
             </div>
+
             <div className="benefit-card">
-              <div className="benefit-icon">🔒</div>
-              <h3>Secure Booking</h3>
-              <p>Your information is safe. No platform middlemen, just direct service.</p>
+              <svg className="benefit-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <h3>Secure & Simple</h3>
+              <p>Easy booking process with secure payment - no middleman complications</p>
+            </div>
+          </div>
+
+          {/* Trust Signals */}
+          <div className="trust-signals">
+            <div className="trust-item">
+              <span className="trust-icon">🏠</span>
+              <span className="trust-text">Family Owned</span>
+            </div>
+            <div className="trust-item">
+              <span className="trust-icon">⭐</span>
+              <span className="trust-text">5-Star Reviews</span>
+            </div>
+            <div className="trust-item">
+              <span className="trust-icon">✓</span>
+              <span className="trust-text">Verified Properties</span>
+            </div>
+            <div className="trust-item">
+              <span className="trust-icon">🔒</span>
+              <span className="trust-text">Secure Payments</span>
             </div>
           </div>
         </div>
