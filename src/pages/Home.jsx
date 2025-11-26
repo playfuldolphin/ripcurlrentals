@@ -48,6 +48,32 @@ function Home() {
         </div>
       </section>
 
+      {/* About the Area Section */}
+      <section className="area-section">
+        <div className="container">
+          <h2>Experience Jacksonville Beach</h2>
+          <p className="area-intro">
+            Discover the perfect blend of beach life and coastal charm in beautiful Jacksonville Beach, Florida.
+          </p>
+          <div className="area-images">
+            <div className="area-image-card">
+              <img src="/images/area/jaxbeach.jpeg" alt="Jacksonville Beach neighborhood" />
+              <div className="area-image-caption">
+                <h3>Beachside Living</h3>
+                <p>Just steps from pristine sandy beaches and the Atlantic Ocean</p>
+              </div>
+            </div>
+            <div className="area-image-card">
+              <img src="/images/area/jaxbeach2.jpeg" alt="Jacksonville Beach coastline" />
+              <div className="area-image-caption">
+                <h3>Coastal Paradise</h3>
+                <p>Miles of beautiful coastline perfect for relaxation and adventure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="contact-section">
         <div className="container">
