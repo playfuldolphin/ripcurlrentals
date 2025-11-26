@@ -1,0 +1,187 @@
+================================================================================
+PRIVACY UPDATE - ADDRESSES PROTECTED
+================================================================================
+
+✓ ADDRESSES REMOVED FROM PUBLIC VIEW
+
+Date: November 26, 2025
+Security: Addresses now shared only after booking
+
+================================================================================
+WHAT CHANGED
+================================================================================
+
+BEFORE:
+- Full street address visible on website
+- Jacksonville Beach: 843 13th Ave S, Jacksonville Beach, FL 32250
+
+AFTER:
+- General location only shown publicly
+- Jacksonville Beach: "South Jacksonville Beach, FL"
+- St. Augustine: "St. Augustine, FL"
+
+✓ Property descriptions now state:
+  "Exact address provided after booking confirmation."
+
+================================================================================
+WHY THIS MATTERS
+================================================================================
+
+✓ Protects your property from unwanted visitors
+✓ Prevents address sharing before commitment
+✓ Standard practice for vacation rentals
+✓ Guests still know the general area
+✓ Exact location shared once booking is confirmed
+
+This is a best practice used by Airbnb, VRBO, and all major
+vacation rental platforms.
+
+================================================================================
+WHAT GUESTS SEE
+================================================================================
+
+ON WEBSITE:
+- Property name: "Bongo Lei Low - South Jax Beach House"
+- Location: "South Jacksonville Beach, FL"
+- Description mentions: "Exact address provided after booking"
+
+AFTER BOOKING:
+- You send exact address via email
+- Include: 843 13th Ave S, Jacksonville Beach, FL 32250
+- Can include parking instructions, entry details, etc.
+
+================================================================================
+CURRENT DISPLAY
+================================================================================
+
+Jacksonville Beach Property:
+  Public Display: "South Jacksonville Beach, FL"
+  Actual Address: 843 13th Ave S, Jacksonville Beach, FL 32250
+  Share after: Booking confirmation
+
+St. Augustine Property:
+  Public Display: "St. Augustine, FL"  
+  Actual Address: (You'll provide this after bookings)
+  Share after: Booking confirmation
+
+================================================================================
+BOOKING WORKFLOW
+================================================================================
+
+1. Guest browses your website
+   - Sees general location: "South Jacksonville Beach, FL"
+   - Views photos, amenities, pricing
+   
+2. Guest submits booking inquiry
+   - Fills out form with dates, guest count
+   - Email sent to bookings@riptiderentals.com
+   
+3. You receive inquiry
+   - Review request
+   - Check availability
+   - Confirm booking
+
+4. You send confirmation email
+   - Include exact address
+   - Parking instructions
+   - Entry/lock code information
+   - Check-in details
+   - House rules
+
+5. Guest receives address
+   - Only after confirmed booking
+   - Can plan their arrival
+
+================================================================================
+EMAIL TEMPLATE FOR CONFIRMED BOOKINGS
+================================================================================
+
+Subject: Booking Confirmed - [Property Name] - [Dates]
+
+Hi [Guest Name],
+
+Your booking is confirmed! We're excited to host you.
+
+PROPERTY ADDRESS:
+Bongo Lei Low
+843 13th Ave S
+Jacksonville Beach, FL 32250
+
+CHECK-IN: [Date] at [Time]
+CHECK-OUT: [Date] at [Time]
+
+PARKING: [Your parking instructions]
+
+ENTRY: [Lock code or key pickup instructions]
+
+CONTACT: [Your phone number] for any questions
+
+Looking forward to your stay!
+
+Best regards,
+Riptide Rentals
+bookings@riptiderentals.com
+
+================================================================================
+VIEW YOUR UPDATED SITE
+================================================================================
+
+✓ Open: http://localhost:5173
+
+Check both properties:
+- Jacksonville Beach shows "South Jacksonville Beach, FL"
+- St. Augustine shows "St. Augustine, FL"
+- Descriptions mention "address provided after booking"
+- No specific street addresses visible
+
+================================================================================
+FILES UPDATED
+================================================================================
+
+✓ src/data/properties.js
+  - Line 5: Jacksonville Beach location
+  - Line 7: Jacksonville Beach description
+  - Line 38: St. Augustine location
+  - Line 40: St. Augustine description
+
+No other changes needed - privacy is now built in!
+
+================================================================================
+ADDITIONAL PRIVACY TIPS
+================================================================================
+
+✓ Don't include street numbers in photos (blur if needed)
+✓ Don't mention cross streets in descriptions
+✓ Keep neighborhood general ("South Jax Beach" not "13th Ave area")
+✓ Share WiFi passwords only after check-in
+✓ Provide lock codes day of arrival, not before
+
+This protects both you and your properties!
+
+================================================================================
+WHAT'S COMPLETE NOW
+================================================================================
+
+✓ Website: Riptide Rentals
+✓ Domain: riptiderentals.com ready
+✓ Email: bookings@riptiderentals.com
+
+✓ Jacksonville Beach: 101 photos, general location
+✓ St. Augustine: 58 photos, general location
+✓ Address privacy: Protected ✓
+✓ Booking forms: Working
+✓ Contact info: Active
+
+Still to do:
+□ Update phone number
+□ Optimize photos
+□ Deploy to web
+
+================================================================================
+
+                    ADDRESSES NOW PROTECTED! 🔒
+              Shared only after booking confirmation
+
+           Your properties and privacy are now secure!
+
+================================================================================

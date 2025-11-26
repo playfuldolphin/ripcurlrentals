@@ -1,0 +1,210 @@
+================================================================================
+WEBSITE STRUCTURE & FEATURES
+================================================================================
+
+YOUR WEBSITE HAS 3 MAIN PAGES:
+================================================================================
+
+1. HOME PAGE (/)
+   └─ Hero Section
+      ├─ Large background image
+      ├─ "Your Private Northeast Florida Escape"
+      └─ "View Properties" button
+   
+   └─ Properties Section
+      ├─ Property Card: Jacksonville Beach
+      │  ├─ Large property image
+      │  ├─ 3 Bedrooms, 2 Bathrooms, 8 Guests
+      │  ├─ "From $250/night"
+      │  └─ "View Details" button
+      │
+      └─ Property Card: St. Augustine
+         ├─ Large property image
+         ├─ 4 Bedrooms, 3 Bathrooms, 10 Guests
+         ├─ "From $300/night"
+         └─ "View Details" button
+   
+   └─ Contact Section
+      ├─ Email: bookings@riptiderentals.com
+      └─ Phone: (904) 555-0123
+
+2. PROPERTY DETAIL PAGE (/property/jax-beach)
+   └─ Back to Properties link
+   └─ Property name & location
+   └─ Image Gallery
+      ├─ Large image display
+      ├─ Previous/Next arrows
+      └─ Dots for image selection
+   
+   └─ Property Details
+      ├─ Bedroom/Bathroom/Guest counts
+      ├─ Full description
+      └─ Amenities list with checkmarks
+   
+   └─ Booking Form (sidebar)
+      ├─ Price display
+      ├─ Name, Email, Phone fields
+      ├─ Check-in/Check-out date pickers
+      ├─ Number of guests
+      ├─ Message/special requests
+      └─ "Send Inquiry" button
+
+3. PROPERTY DETAIL PAGE (/property/st-augustine)
+   └─ Same structure as Jacksonville Beach property
+   └─ Different photos, details, amenities
+
+================================================================================
+
+HEADER (on every page)
+├─ "Riptide Rentals" logo/link
+└─ Navigation
+   ├─ Properties
+   └─ Contact
+
+FOOTER (on every page)
+├─ About section
+├─ Contact information
+└─ Locations
+└─ Copyright
+
+================================================================================
+
+HOW BOOKING WORKS (CURRENT SETUP)
+================================================================================
+
+1. Guest fills out booking form with:
+   - Name, email, phone
+   - Check-in and check-out dates
+   - Number of guests
+   - Special requests/questions
+
+2. Clicks "Send Inquiry"
+
+3. Opens their email client with pre-filled message containing all info
+
+4. They send the email to you (bookings@riptiderentals.com)
+
+5. You receive the inquiry and respond directly
+
+NOTE: This is a simple email-based system. No payment processing yet.
+      You can add Stripe/PayPal integration later.
+
+================================================================================
+
+RESPONSIVE DESIGN
+================================================================================
+
+DESKTOP (1200px+)
+├─ Full-width hero image
+├─ Properties side-by-side
+├─ Booking form in sidebar
+└─ All features visible
+
+TABLET (768px - 1199px)
+├─ Adjusted layouts
+├─ Properties side-by-side
+└─ Booking form below content
+
+MOBILE (< 768px)
+├─ Stacked layouts
+├─ Properties full-width
+├─ Simplified navigation
+└─ Touch-friendly buttons
+
+================================================================================
+
+FEATURES INCLUDED
+================================================================================
+
+✓ SEO-friendly page titles and meta descriptions
+✓ Fast loading with optimized Vite build
+✓ Modern React with React Router for navigation
+✓ Clean, professional design
+✓ Easy to customize (all content in one file)
+✓ Email-based booking inquiries
+✓ Responsive images
+✓ Smooth transitions and hover effects
+✓ Mobile-first approach
+
+================================================================================
+
+CUSTOMIZATION POINTS
+================================================================================
+
+MUST CUSTOMIZE:
+□ Property photos (3 per property)
+□ Property descriptions
+□ Property details (beds, baths, guests)
+□ Amenities lists
+□ Nightly rates
+□ Contact email and phone
+
+SHOULD CUSTOMIZE:
+□ Site name/branding
+□ Hero image
+□ Color scheme
+
+CAN CUSTOMIZE:
+□ Add more properties
+□ Change fonts
+□ Adjust pricing display
+□ Add more amenities
+□ Customize form fields
+
+================================================================================
+
+WHERE EVERYTHING IS
+================================================================================
+
+ALL PROPERTY DATA:
+→ src/data/properties.js
+  (This is your main content file!)
+
+HOMEPAGE:
+→ src/pages/Home.jsx
+→ src/pages/Home.css
+
+PROPERTY PAGES:
+→ src/pages/Property.jsx
+→ src/pages/Property.css
+
+HEADER & FOOTER:
+→ src/components/Header.jsx
+→ src/components/Footer.jsx
+
+GLOBAL STYLES:
+→ src/index.css
+→ src/App.css
+
+PAGE TITLE:
+→ index.html
+
+================================================================================
+
+TYPICAL WORKFLOW
+================================================================================
+
+1. Edit src/data/properties.js
+   └─ Add your property info and photo URLs
+
+2. Update contact info in 3 files
+   └─ Search for "bookings@riptiderentals.com" and replace
+
+3. npm run dev
+   └─ Test locally at http://localhost:5173
+
+4. Make adjustments as needed
+
+5. npm run build
+   └─ Creates production-ready files in dist/
+
+6. Deploy to Netlify/Vercel
+   └─ Your site goes live!
+
+7. Point custom domain (optional)
+   └─ yourrentals.com
+
+8. Share link with potential guests
+   └─ Start getting bookings!
+
+================================================================================

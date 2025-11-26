@@ -1,0 +1,309 @@
+================================================================================
+CONNECTING RIPTIDERENTALS.COM FROM GODADDY TO YOUR WEBSITE
+================================================================================
+
+✓ You own: riptiderentals.com on GoDaddy
+✓ Goal: Point it to your Riptide Rentals website
+
+================================================================================
+STEP-BY-STEP GUIDE
+================================================================================
+
+STEP 1: DEPLOY YOUR SITE TO NETLIFY (15 MINUTES)
+================================================================================
+
+1. Push your code to GitHub:
+
+   a. Create a GitHub account (if you don't have one):
+      → Go to github.com
+      → Click "Sign up"
+      → Follow the steps
+
+   b. Create a new repository:
+      → Click the "+" icon (top right)
+      → Select "New repository"
+      → Name it: riptide-rentals
+      → Make it Public
+      → Click "Create repository"
+
+   c. Push your code:
+      Open Terminal and run:
+
+```bash
+cd /Users/noahwilson/nefl-rentals
+
+# Initialize git
+git init
+
+# Add all files
+git add .
+
+# Create first commit
+git commit -m "Initial commit - Riptide Rentals with 3 properties"
+
+# Add your GitHub repo (replace YOUR_USERNAME)
+git remote add origin https://github.com/YOUR_USERNAME/riptide-rentals.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+```
+
+2. Deploy to Netlify:
+
+   a. Go to: https://netlify.com
+   
+   b. Click "Sign up" (you can sign up with GitHub - easiest!)
+   
+   c. After signing in, click "Add new site"
+   
+   d. Click "Import an existing project"
+   
+   e. Click "Deploy with GitHub"
+   
+   f. Authorize Netlify to access your GitHub
+   
+   g. Select your "riptide-rentals" repository
+   
+   h. Configure settings:
+      - Build command: npm run build
+      - Publish directory: dist
+      
+   i. Click "Deploy site"
+   
+   j. Wait 2-3 minutes for deployment
+   
+   k. You'll get a URL like: https://wonderful-name-123456.netlify.app
+
+3. Test your Netlify site:
+   → Click the URL Netlify gives you
+   → Your site should be live!
+   → Test all 3 properties
+   → Test booking forms
+
+================================================================================
+STEP 2: CONNECT YOUR GODADDY DOMAIN (10 MINUTES)
+================================================================================
+
+Now that your site is live on Netlify, let's connect riptiderentals.com:
+
+A. IN NETLIFY:
+
+1. In your Netlify dashboard, click on your site
+
+2. Go to "Domain settings" (in the top menu)
+
+3. Click "Add custom domain"
+
+4. Enter: riptiderentals.com
+
+5. Click "Verify"
+
+6. Click "Add domain" (Netlify will say you need to configure DNS)
+
+7. Netlify will show you DNS settings - KEEP THIS PAGE OPEN!
+
+   You'll see something like:
+   - Type: A
+   - Name: @
+   - Value: 75.2.60.5 (example IP)
+   
+   - Type: CNAME
+   - Name: www
+   - Value: wonderful-name-123456.netlify.app
+
+B. IN GODADDY:
+
+1. Go to: https://godaddy.com
+
+2. Sign in to your account
+
+3. Click on your name (top right) → "My Products"
+
+4. Find "riptiderentals.com" and click "DNS"
+
+5. You'll see your DNS records
+
+6. Update the records with Netlify's information:
+
+   FOR THE ROOT DOMAIN (@):
+   
+   a. Find any existing "A" records
+   b. Click the pencil icon to edit
+   c. Change the IP address to Netlify's IP (from step A.7 above)
+   d. TTL: 1 hour (or leave default)
+   e. Click "Save"
+   
+   FOR WWW SUBDOMAIN:
+   
+   a. Find the "CNAME" record for "www"
+   b. Click the pencil icon to edit
+   c. Change "Points to" to: your-site-name.netlify.app
+   d. TTL: 1 hour
+   e. Click "Save"
+
+7. You may also need to:
+   - Delete any conflicting records (like parking page records)
+   - GoDaddy might have records like "parked" - delete these
+
+C. BACK IN NETLIFY:
+
+1. Return to Netlify "Domain settings"
+
+2. Click "Verify DNS configuration"
+
+3. Netlify will check if GoDaddy is configured correctly
+
+4. Enable HTTPS:
+   - In Domain settings
+   - Scroll to "HTTPS"
+   - Click "Verify DNS configuration"
+   - Wait for SSL certificate (can take a few minutes)
+
+================================================================================
+STEP 3: WAIT FOR DNS PROPAGATION (24-48 HOURS)
+================================================================================
+
+After updating GoDaddy's DNS:
+
+⏰ DNS changes take time to propagate worldwide
+⏰ Usually works in 1-4 hours
+⏰ Can take up to 48 hours maximum
+
+During this time:
+- Your site might work sometimes, not others
+- You might see the old GoDaddy parking page
+- This is normal!
+
+Check status:
+- Try: https://riptiderentals.com
+- Try: https://www.riptiderentals.com
+- Use: https://www.whatsmydns.net to check propagation
+
+================================================================================
+ALTERNATIVE: USE NETLIFY DNS (EASIER!)
+================================================================================
+
+If GoDaddy's DNS is confusing, you can use Netlify's DNS instead:
+
+1. In Netlify, go to Domain settings
+
+2. Click "Use Netlify DNS" (recommended option)
+
+3. Netlify will give you 4 nameserver addresses like:
+   - dns1.p01.nsone.net
+   - dns2.p01.nsone.net
+   - dns3.p01.nsone.net
+   - dns4.p01.nsone.net
+
+4. Go to GoDaddy:
+   a. My Products → riptiderentals.com
+   b. Click on domain name
+   c. Scroll to "Nameservers"
+   d. Click "Change"
+   e. Select "Custom"
+   f. Enter the 4 Netlify nameservers
+   g. Click "Save"
+
+5. This transfers DNS management to Netlify (easier!)
+
+6. Wait 24-48 hours for propagation
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Site not loading?
+→ Wait longer (DNS can take 24-48 hours)
+→ Clear your browser cache (Cmd+Shift+R)
+→ Try incognito/private browsing
+→ Check https://www.whatsmydns.net
+
+Photos not loading?
+→ Make sure you ran "npm run build" before deploying
+→ Photos should be in public/images/ folder
+→ Check Netlify deploy log for errors
+
+Forms not working?
+→ Forms work the same - they open email client
+→ Email needs to be configured on user's device
+
+SSL/HTTPS not working?
+→ Wait for Netlify to provision certificate (30 mins)
+→ In Netlify: Domain settings → HTTPS → Verify DNS
+
+Getting "Site not found"?
+→ Check you're using the right URL
+→ Verify Netlify deployment succeeded
+→ Check GoDaddy DNS settings match Netlify's
+
+================================================================================
+AFTER IT'S LIVE
+================================================================================
+
+Once riptiderentals.com is working:
+
+✓ Test all 3 properties
+✓ Test all booking forms
+✓ Test on mobile
+✓ Share with friends
+✓ Start marketing!
+
+Set up email forwarding:
+1. In GoDaddy: My Products
+2. Click on riptiderentals.com
+3. Find "Email Forwarding"
+4. Add: bookings@riptiderentals.com → your personal email
+5. Now booking inquiries go to you!
+
+================================================================================
+QUICK REFERENCE
+================================================================================
+
+Your Resources:
+- Domain: riptiderentals.com (GoDaddy)
+- Hosting: Netlify (free)
+- Code: GitHub
+- Website: /Users/noahwilson/nefl-rentals
+
+DNS Settings (typical):
+- A Record: @ → Netlify IP (e.g., 75.2.60.5)
+- CNAME: www → your-site.netlify.app
+
+Timeline:
+- Deploy to Netlify: 5-10 minutes
+- Configure domain: 10 minutes
+- DNS propagation: 1-48 hours
+- Total: Usually live in 2-4 hours!
+
+================================================================================
+NEED HELP?
+================================================================================
+
+Netlify Support:
+- Help docs: https://docs.netlify.com
+- Community: https://answers.netlify.com
+
+GoDaddy Support:
+- Help: https://www.godaddy.com/help
+- Phone: Check their website for current number
+
+Common GoDaddy DNS settings:
+- https://www.godaddy.com/help/manage-dns-records-680
+
+Netlify custom domain setup:
+- https://docs.netlify.com/domains-https/custom-domains/
+
+================================================================================
+
+                  🌐 YOUR DEPLOYMENT ROADMAP 🌐
+
+      1. Push code to GitHub (5 min)
+      2. Deploy to Netlify (5 min)
+      3. Connect GoDaddy domain (10 min)
+      4. Wait for DNS propagation (1-48 hours)
+      5. LIVE at riptiderentals.com!
+
+              Start with Step 1 above! 🚀
+
+================================================================================

@@ -1,0 +1,135 @@
+================================================================================
+BRANDING UPDATE - RIPTIDE RENTALS
+================================================================================
+
+✓ ALL FILES UPDATED TO "RIPTIDE RENTALS"
+
+Date: November 26, 2025
+Domain: riptiderentals.com
+
+================================================================================
+CHANGES MADE
+================================================================================
+
+✓ Site Name: "Riptide Rentals" (was "Northeast Florida Rentals")
+✓ Email: bookings@riptiderentals.com (was bookings@neflrentals.com)
+✓ Phone: (904) 555-0123 (update with YOUR real number)
+
+================================================================================
+FILES UPDATED
+================================================================================
+
+WEBSITE FILES:
+✓ src/components/Header.jsx          - Logo/site name
+✓ src/components/Footer.jsx          - Footer branding & contact
+✓ src/pages/Home.jsx                 - Contact email
+✓ src/pages/Property.jsx             - Booking form email
+✓ index.html                         - Page title & meta description
+
+DOCUMENTATION:
+✓ README.md                          - All references
+✓ SETUP_GUIDE.md                     - All references
+✓ NEXT_STEPS.md                      - All references
+✓ QUICKSTART.md                      - All references
+✓ SUMMARY.txt                        - All references
+✓ SITE_STRUCTURE.txt                 - All references
+
+================================================================================
+WHAT YOU STILL NEED TO UPDATE
+================================================================================
+
+1. PHONE NUMBER
+   Update (904) 555-0123 with YOUR REAL phone number in:
+   - src/components/Footer.jsx (line 17)
+   - src/pages/Home.jsx (line 63)
+
+2. PROPERTY PHOTOS & INFO
+   Edit src/data/properties.js:
+   - Add your real property photos
+   - Update descriptions
+   - Verify bedroom/bathroom counts
+   - Set accurate prices
+
+3. HERO IMAGE (optional)
+   The homepage hero uses a beach photo from Unsplash.
+   To change it, edit src/pages/Home.css (line 9)
+
+================================================================================
+VERIFY YOUR SITE
+================================================================================
+
+Your site is running at: http://localhost:5173
+
+Check these pages:
+1. Homepage - Should say "Riptide Rentals" at top
+2. Footer - Should show bookings@riptiderentals.com
+3. Contact section - Should show correct email
+4. Property detail pages - Test booking form
+5. Booking form should email bookings@riptiderentals.com
+
+================================================================================
+EMAIL SETUP FOR RIPTIDERENTALS.COM
+================================================================================
+
+You'll need to set up email for your domain. Options:
+
+OPTION 1: Domain Email (Professional)
+- Use your domain registrar's email service
+- Or use Google Workspace ($6/month per user)
+- Or use Zoho Mail (free for 1 user, or $1/month)
+- Get: bookings@riptiderentals.com
+
+OPTION 2: Email Forwarding (Simple & Free)
+- Set up email forwarding at your domain registrar
+- Forward bookings@riptiderentals.com to your personal email
+- Reply from personal email (guests see your personal email)
+
+OPTION 3: Use Personal Email for Now
+- Change email in the code to your current email
+- Set up domain email later when you're ready
+
+RECOMMENDED: Start with Option 2 (forwarding), upgrade to Option 1 later.
+
+================================================================================
+DOMAIN SETUP CHECKLIST
+================================================================================
+
+When you're ready to launch at riptiderentals.com:
+
+□ Purchase domain: riptiderentals.com
+  Recommended: Namecheap, Google Domains, or Cloudflare
+
+□ Deploy site to Netlify/Vercel (free hosting)
+
+□ Point domain to hosting:
+  - Add DNS records provided by Netlify/Vercel
+  - Wait 24-48 hours for DNS propagation
+
+□ Set up email:
+  - Configure email forwarding or hosted email
+  - Test that bookings@ works
+
+□ Test everything:
+  - Visit riptiderentals.com
+  - Test booking form
+  - Check on mobile
+  - Share with friends for feedback
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Update phone number (search for "904) 555-0123")
+2. Add your property photos to src/data/properties.js
+3. Test locally: http://localhost:5173
+4. When ready, follow QUICKSTART.md to deploy
+
+Your domain: riptiderentals.com
+Your email: bookings@riptiderentals.com
+
+================================================================================
+
+Built for your Northeast Florida rental business!
+Direct bookings. No platform fees. Your brand.
+
+================================================================================

@@ -1,0 +1,281 @@
+.property-page {
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.property-page h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+}
+
+.property-page .location {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Image Gallery */
+.image-gallery {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.gallery-nav:hover {
+  background: white;
+}
+
+.gallery-nav.prev {
+  left: 1rem;
+}
+
+.gallery-nav.next {
+  right: 1rem;
+}
+
+.image-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* Property Layout */
+.property-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 3rem;
+}
+
+.property-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.property-stats {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: #666;
+}
+
+.stat strong {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.property-description h2,
+.amenities h2 {
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.property-description p {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.amenities-list li {
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 5px;
+  color: #333;
+}
+
+.amenities-list li:before {
+  content: '✓ ';
+  color: #0066cc;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Booking Sidebar */
+.booking-sidebar {
+  position: relative;
+}
+
+.booking-card {
+  position: sticky;
+  top: 100px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-display {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.price-display .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0066cc;
+}
+
+.price-display .period {
+  color: #666;
+  font-size: 1rem;
+}
+
+.booking-form h3 {
+  margin: 0 0 1.5rem 0;
+  color: #1a1a1a;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #0052a3;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .property-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-card {
+    position: static;
+  }
+  
+  .image-gallery {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-page h1 {
+    font-size: 2rem;
+  }
+  
+  .property-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .amenities-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
