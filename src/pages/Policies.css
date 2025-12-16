@@ -1,0 +1,408 @@
+/* Clean Modern Policies Page Design */
+
+.policies-page {
+  padding: 3rem 0 5rem;
+  min-height: calc(100vh - 200px);
+  background: var(--white);
+}
+
+.policies-page .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.policies-page .back-link:hover {
+  color: var(--primary-dark);
+  transform: translateX(-3px);
+}
+
+.policies-page h1 {
+  margin: 0 0 1rem 0;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.policies-intro {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* Policies Grid */
+.policies-grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Policy Section Card */
+.policy-section {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.policy-section:hover {
+  box-shadow: 0 4px 20px var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.policy-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.policy-section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.policy-content {
+  color: var(--text-light);
+}
+
+.policy-content > p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Policy Tiers (for Cancellation) */
+.policy-tier {
+  background: var(--bg-light);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.policy-tier h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.policy-tier p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
+.policy-tier p strong {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.policy-note {
+  background: #FFF9E6;
+  border: 1px solid #FFE066;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.policy-note p {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+/* Policy Items (for Booking & Payment, etc.) */
+.policy-item {
+  margin-bottom: 2rem;
+}
+
+.policy-item:last-child {
+  margin-bottom: 0;
+}
+
+.policy-item h3 {
+  margin: 0 0 0.75rem 0;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.policy-item p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.policy-item strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.policy-item ul {
+  margin: 1rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.policy-item ul li {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Time Details (for Check-in/Check-out) */
+.time-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.time-block {
+  background: linear-gradient(135deg, #E8F5F3 0%, #D4EDE8 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid var(--primary);
+}
+
+.time-block h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.time-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+}
+
+.time-block p {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Rules List */
+.rules-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.rule-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  align-items: flex-start;
+}
+
+.rule-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.rule-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.rule-item p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Stay Requirements */
+.stay-requirements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stay-block {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.stay-block.highlight {
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE9CC 100%);
+  border-color: #FFB84D;
+}
+
+.stay-block h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.stay-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+}
+
+.stay-block.highlight .stay-large {
+  color: #E67E00;
+}
+
+.stay-block p {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.policies-contact {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+}
+
+.policies-contact h2 {
+  margin: 0 0 1rem 0;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.policies-contact p {
+  margin: 0 0 2rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-btn.primary {
+  background: white;
+  color: var(--primary);
+}
+
+.contact-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.contact-btn.secondary:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policies-page {
+    padding: 2rem 0 3rem;
+  }
+
+  .policy-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .policy-icon {
+    font-size: 2.5rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .time-details,
+  .stay-requirements {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .time-large,
+  .stay-large {
+    font-size: 2rem;
+  }
+
+  .rule-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .rule-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .policies-contact {
+    padding: 2rem 1.5rem;
+  }
+
+  .policies-contact h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
